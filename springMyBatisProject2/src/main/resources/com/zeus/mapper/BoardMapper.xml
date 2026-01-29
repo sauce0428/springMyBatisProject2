@@ -7,7 +7,7 @@
 	</insert>
 	
 	<select id="read" resultType="Board">
-		SELECT no, title, content, writer, reg_date FROM mybatisBoard WHERE no = #{no}
+		SELECT no, title, content, writer, regDate FROM mybatisBoard WHERE no = #{no}
 	</select>
 	
 	<update id="update">
@@ -19,7 +19,7 @@
 	</delete>
 	
 	<select id="list" resultType="Board"> 
-<![CDATA[ SELECT no, title, content, writer, reg_date FROM mybatisboard WHERE no > 0 ORDER BY no DESC, reg_date DESC ]]>
+<![CDATA[ SELECT no, title, content, writer, regDate FROM mybatisboard WHERE no > 0 ORDER BY no DESC, regDate DESC ]]>
 	</select>
 	
 	<select id="boardSearch" resultType="Board">
